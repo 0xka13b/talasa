@@ -11,6 +11,9 @@
 > Telegram. We never got a single lead, so I decided to open-source the project
 > in the hope that it will be useful to someone.
 >
+> Kudos to @kolebayev for shaping the UI/UX of the platform and making it both
+> usable and beautiful.
+>
 > If you have questions or suggestions, write to me at
 > [ko1ebayev.worx@gmail.com](mailto:ko1ebayev.worx@gmail.com).
 
