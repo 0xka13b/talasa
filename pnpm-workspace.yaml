@@ -1,0 +1,10 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# Native deps whose build scripts are intentionally not run (pnpm 10 blocks
+# postinstall by default; these ship prebuilt binaries). Carried over from the
+# create-next-app scaffold.
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver

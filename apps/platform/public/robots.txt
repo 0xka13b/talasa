@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+# Talasa platform is the application (behind auth) — not for indexing.
+User-agent: *
+Disallow: /

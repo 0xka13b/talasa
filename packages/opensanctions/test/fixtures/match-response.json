@@ -1,0 +1,70 @@
+{
+  "responses": {
+    "q0": {
+      "status": 200,
+      "results": [
+        {
+          "id": "vessel-sdn-1",
+          "caption": "SANCTIONED TANKER",
+          "schema": "Vessel",
+          "score": 0.97,
+          "match": true,
+          "target": true,
+          "datasets": ["us_ofac_sdn", "eu_fsf"],
+          "first_seen": "2021-05-01",
+          "last_seen": "2024-03-10",
+          "last_change": "2024-02-28",
+          "properties": {
+            "name": ["SANCTIONED TANKER"],
+            "imoNumber": ["9999999"],
+            "topics": ["sanction"],
+            "notes": ["Seized attempting to evade the oil price cap."],
+            "description": ["Tanker designated for exporting crude in breach of the price cap."]
+          }
+        }
+      ]
+    },
+    "q1": {
+      "status": 200,
+      "results": [
+        {
+          "id": "company-eu-1",
+          "caption": "ACME SHIPPING LTD",
+          "schema": "Company",
+          "score": 0.83,
+          "match": true,
+          "target": true,
+          "datasets": ["eu_fsf"],
+          "properties": {
+            "name": ["ACME SHIPPING LTD"],
+            "topics": ["sanction.linked"],
+            "notes": ["Owner of record for a sanctioned vessel."]
+          }
+        }
+      ]
+    },
+    "q2": {
+      "status": 200,
+      "results": [
+        {
+          "id": "pep-1",
+          "caption": "JANE POLITICIAN",
+          "schema": "Person",
+          "score": 0.78,
+          "match": true,
+          "target": false,
+          "datasets": ["everypolitician"],
+          "properties": {
+            "name": ["JANE POLITICIAN"],
+            "topics": ["role.pep"]
+          }
+        }
+      ]
+    },
+    "q3": {
+      "status": 200,
+      "results": []
+    }
+  },
+  "limit": 5
+}

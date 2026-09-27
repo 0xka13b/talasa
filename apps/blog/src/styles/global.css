@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+ * Talasa design tokens — monochrome dark canvas, off-white ink.
+ * Palette copied from apps/landing/src/styles.css (:root). All colors oklch.
+ * Fonts are self-hosted variable fonts (see BaseHead.astro imports).
+ */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.13 0.005 250);
+  --foreground: oklch(0.96 0.005 250);
+  --card: oklch(0.16 0.005 250);
+  --card-foreground: oklch(0.96 0.005 250);
+  --primary: oklch(0.96 0.005 250);
+  --primary-foreground: oklch(0.13 0.005 250);
+  --secondary: oklch(0.22 0.005 250);
+  --secondary-foreground: oklch(0.96 0.005 250);
+  --muted: oklch(0.2 0.005 250);
+  --muted-foreground: oklch(0.62 0.008 250);
+  --accent: oklch(0.22 0.005 250);
+  --accent-foreground: oklch(0.96 0.005 250);
+  --border: oklch(0.26 0.005 250);
+  --ring: oklch(0.55 0.008 250);
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+}
+
+/* Post body: invert prose for the dark canvas and bind it to brand tokens. */
+@layer components {
+  .prose-talasa {
+    --tw-prose-body: var(--color-foreground);
+    --tw-prose-headings: var(--color-foreground);
+    --tw-prose-links: var(--color-foreground);
+    --tw-prose-bold: var(--color-foreground);
+    --tw-prose-quotes: var(--color-muted-foreground);
+    --tw-prose-quote-borders: var(--color-border);
+    --tw-prose-hr: var(--color-border);
+    --tw-prose-code: var(--color-foreground);
+    --tw-prose-bullets: var(--color-muted-foreground);
+    --tw-prose-counters: var(--color-muted-foreground);
+    --tw-prose-captions: var(--color-muted-foreground);
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "type": "lei-records",
+      "id": "529900W18LQJJN6SJ336",
+      "attributes": {
+        "lei": "529900W18LQJJN6SJ336",
+        "entity": {
+          "legalName": {
+            "name": "Société Générale Effekten GmbH",
+            "language": null
+          },
+          "otherNames": [],
+          "legalAddress": {
+            "addressLines": [
+              "Neue Mainzer Straße 46-50"
+            ],
+            "city": "Frankfurt am Main",
+            "region": "DE-HE",
+            "country": "DE",
+            "postalCode": "60311"
+          },
+          "headquartersAddress": {
+            "addressLines": [
+              "Neue Mainzer Straße 46-50"
+            ],
+            "city": "Frankfurt am Main",
+            "region": "DE-HE",
+            "country": "DE",
+            "postalCode": "60311"
+          },
+          "registeredAt": {
+            "id": "RA000242",
+            "other": null
+          },
+          "registeredAs": "HRB 32283",
+          "jurisdiction": "DE",
+          "category": null,
+          "legalForm": {
+            "id": "2HBR",
+            "other": null
+          },
+          "status": "ACTIVE"
+        },
+        "registration": {
+          "status": "ISSUED",
+          "managingLou": "5299000J2N45DDNE4Y28"
+        },
+        "bic": [
+          "SGEFDEFFXXX",
+          "SGEGDEF1XXX"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@talasa/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file=../../.env src/migrate.ts",
+    "db:push": "dotenv -e ../../.env -- drizzle-kit push",
+    "db:studio": "dotenv -e ../../.env -- drizzle-kit studio",
+    "db:dump": "tsx --env-file=../../.env src/seed/dump.ts",
+    "db:seed": "tsx --env-file=../../.env src/seed/seed.ts"
+  },
+  "dependencies": {
+    "@talasa/shared": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@talasa/typescript-config": "workspace:*",
+    "@types/node": "^22",
+    "better-auth": "^1.6.20",
+    "dotenv-cli": "^7.4.4",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5"
+  }
+}

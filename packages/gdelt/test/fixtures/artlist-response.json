@@ -1,0 +1,54 @@
+{
+  "articles": [
+    {
+      "url": "https://www.bbc.com/news/articles/c9324y4yer4o",
+      "url_mobile": "",
+      "title": "Captain of seized Russian shadow fleet tanker appears in court",
+      "seendate": "20260616T170000Z",
+      "socialimage": "https://ichef.bbci.co.uk/news/1024/branded_news/bb4d/live/813af630-6993-11f1-8546-8f19e4fe30f4.jpg",
+      "domain": "bbc.com",
+      "language": "English",
+      "sourcecountry": "United Kingdom"
+    },
+    {
+      "url": "https://article.wn.com/view/2026/06/15/UK_arrests_Indian_man_after_seizing_sanctioned_Russian_shado/",
+      "url_mobile": "",
+      "title": "UK arrests Indian man after seizing sanctioned Russian shadow fleet oil tanker",
+      "seendate": "20260615T160000Z",
+      "socialimage": "",
+      "domain": "article.wn.com",
+      "language": "English",
+      "sourcecountry": "United States"
+    },
+    {
+      "url": "https://www.haberaktuel.com/rus-savas-gemisi-ingiliz-yata-ates-acti-3447704",
+      "url_mobile": "",
+      "title": "Rus Savaş Gemisi İngiliz Yata Ateş Açtı",
+      "seendate": "20260616T220000Z",
+      "socialimage": "https://www.haberaktuel.com/wp-content/uploads/rus-savas-gemisi-ingiliz-yata-ates-acti.webp",
+      "domain": "haberaktuel.com",
+      "language": "Turkish",
+      "sourcecountry": "Turkey"
+    },
+    {
+      "url": "https://www.epochtimes.com/gb/26/6/5/n14782886.htm",
+      "url_mobile": "https://www.epochtimes.com/gb/26/6/5/n14782886.htm/amp",
+      "title": "美发布新制裁 打击伊朗液化石油气走私网 | 美国制裁 | 制裁伊朗 | 美国财政部",
+      "seendate": "20260605T204500Z",
+      "socialimage": "https://i.epochtimes.com/assets/uploads/2026/05/id14766397-image_2026-05-17T15_32_06-600x359.jpg",
+      "domain": "epochtimes.com",
+      "language": "Chinese",
+      "sourcecountry": "China"
+    },
+    {
+      "url": "https://www.rbc.ua/rus/news/britaniya-perehopila-tanker-tinovogo-flotu-1781423470.html",
+      "url_mobile": "https://www.rbc.ua/rus/news/britaniya-perehopila-tanker-tinovogo-flotu-1781423470.html/amp",
+      "title": "Танкер тіньового флоту РФ зупинила Британія у Ла - Манші - заява Стармера",
+      "seendate": "20260614T081500Z",
+      "socialimage": "https://www.rbc.ua/static/img/_/t/_tinoviy_flot_turbo_voyager_velikiy_blent_daniya_gettyimages_2167101990_ad12289e62f4090ff8664b15300696bd_1300x820.jpg",
+      "domain": "rbc.ua",
+      "language": "Ukrainian",
+      "sourcecountry": "Ukraine"
+    }
+  ]
+}

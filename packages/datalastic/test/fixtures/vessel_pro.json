@@ -1,0 +1,26 @@
+{
+  "meta": { "duration": 0.02, "endpoint": "/api/v0/vessel_pro", "success": true },
+  "data": {
+    "uuid": "1d9d9e6a-0000-0000-0000-000000000001",
+    "name": "DORRY",
+    "mmsi": 613271707,
+    "imo": 9298595,
+    "eni": null,
+    "country_iso": "CM",
+    "type": "Tanker",
+    "type_specific": "Oil/Chemicals Tanker",
+    "lat": 5.1234,
+    "lon": -4.0123,
+    "speed": 9.3,
+    "course": 210,
+    "heading": 208,
+    "navigation_status": "Under way using engine",
+    "destination": "POINTE NOIRE",
+    "dest_port": "Pointe Noire",
+    "dest_port_unlocode": "CGPNR",
+    "eta_UTC": "2026-07-11 00:00:00",
+    "current_draught": "9.2",
+    "last_position_epoch": 1751367060,
+    "last_position_UTC": "2026-07-01 10:51:00"
+  }
+}

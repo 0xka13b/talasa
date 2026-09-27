@@ -1,0 +1,53 @@
+# Talasa
+
+> Maritime risk intelligence for the desks that carry the risk — vessel & sanctions screening (OFAC · EU · UK · UN and 20+ more lists), counterparty due diligence, port intelligence, dark-fleet detection and market briefs. IMO number in → auditable Vessel Risk Report out, plus an embedded analyst AI copilot. Live in production; founding access is open.
+
+Talasa turns ownership chains, vessel behaviour, sanctions exposure and dark-fleet
+signals into one scored, defensible Block / Caution / Clear decision per vessel, with
+plain-English reasoning an auditor can read. Built for banks & trade finance, P&I and hull
+insurers, commodity traders, shipbrokers, charter desks, and sanctions & compliance teams.
+
+Key facts:
+
+- Status: live in production — real sanctions data (20+ source lists, live-dated matches),
+  live AIS feeds, real dark-fleet cases
+- Coverage: global fleet
+- Sanctions lists screened: OFAC, EU, UK, UN and 20+ more
+- Sources include: live AIS, Equasis, Paris & Tokyo MoU registries
+- Verdicts: vessels scored 0–100 with Block / Caution / Clear; counterparties Accept /
+  Review / Reject; every signal explained with sources and dates; one-click PDF export
+- Ask Agent: embedded AI copilot answers analyst questions on the live dossier with
+  structured, sourced output; human-in-the-loop by design
+- Founding access: demo accounts (capped reports, uncapped AI agent) — request a demo at
+  https://example.com/#contact
+- Decision support only: high-stakes calls reach a person, and final compliance decisions remain
+  with the regulated entity. Talasa does not constitute legal sanctions advice.
+
+Agent affordances:
+
+- `GET https://example.com/` with `Accept: text/markdown` returns the full homepage as markdown
+  (a token estimate is sent in the `x-markdown-tokens` response header).
+
+## Product
+
+- [Homepage](https://example.com/): the five solutions, each with a sample of its report output
+  (the vessel-screening and counterparty samples are real production cases)
+- [Solutions](https://example.com/#solutions): Vessel Risk & Sanctions Screening (flagship),
+  Counterparty & Charter Due Diligence, Port Call & Congestion Intelligence, Dark Fleet & STS
+  Detection, Fixture & Market Intelligence — plus the Ask Agent analyst copilot
+- [Request a demo](https://example.com/#contact): founding-desk demo accounts, NDA on request
+
+## Policies & guides
+
+- [Talasa AI Guide](https://example.com/ai-guide): how Talasa uses AI, and how AI agents
+  may use this site
+- [Privacy Policy](https://example.com/privacy)
+- [Terms of Use](https://example.com/terms)
+
+## Contact
+
+- Email: hello@example.com
+
+## Optional
+
+- [Sitemap](https://example.com/sitemap.xml)

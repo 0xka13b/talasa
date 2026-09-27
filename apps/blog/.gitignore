@@ -1,0 +1,9 @@
+# Astro
+.astro/
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Build output
+dist/

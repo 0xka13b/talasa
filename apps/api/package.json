@@ -1,0 +1,42 @@
+{
+  "name": "@talasa/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=../../.env src/index.ts",
+    "build": "tsup",
+    "start": "node --env-file=../../.env dist/index.js",
+    "check-types": "tsc --noEmit",
+    "test": "dotenv -e ../../.env -- vitest run",
+    "db:generate": "pnpm --filter @talasa/db db:generate",
+    "db:migrate": "pnpm --filter @talasa/db db:migrate",
+    "db:push": "pnpm --filter @talasa/db db:push",
+    "db:studio": "pnpm --filter @talasa/db db:studio"
+  },
+  "dependencies": {
+    "@talasa/copernicus": "workspace:*",
+    "@talasa/datalastic": "workspace:*",
+    "@talasa/db": "workspace:*",
+    "@talasa/equasis": "workspace:*",
+    "@talasa/shared": "workspace:*",
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "^0.4.1",
+    "@openrouter/ai-sdk-provider": "^1.2.0",
+    "ai": "^5.0.210",
+    "better-auth": "^1.6.20",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.6.0",
+    "postgres": "^3.4.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@talasa/typescript-config": "workspace:*",
+    "@types/node": "^22",
+    "dotenv-cli": "^7.4.4",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5",
+    "vitest": "^2"
+  }
+}

@@ -1,0 +1,45 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+}
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    {
+      heroImage && (
+        <img
+          src={heroImage}
+          alt=""
+          class="mb-8 w-full rounded-lg border border-border"
+        />
+      )
+    }
+    <header class="mb-8">
+      <h1 class="text-3xl font-semibold tracking-tight text-foreground">
+        {title}
+      </h1>
+      <div class="mt-2 text-sm">
+        <FormattedDate date={pubDate} />
+        {
+          updatedDate && (
+            <span class="font-mono text-muted-foreground">
+              {" "}· updated <FormattedDate date={updatedDate} />
+            </span>
+          )
+        }
+      </div>
+    </header>
+    <div class="prose prose-invert prose-talasa max-w-none">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

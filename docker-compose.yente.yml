@@ -1,0 +1,67 @@
+name: talasa-yente
+
+# ---------------------------------------------------------------------------
+# Local OpenSanctions matcher (yente + Elasticsearch). Kept out of the main
+# docker-compose.yml on purpose: it's heavy (a multi-GB first download + index)
+# and `pnpm db:reset` must never wipe the search index.
+#
+#   pnpm yente:up      # start; the FIRST boot downloads + indexes the dataset
+#   pnpm yente:logs    # watch indexing progress (tens of minutes the first time)
+#   pnpm yente:down    # stop (the index volume is kept)
+#
+# The jobs worker talks to it at OPENSANCTIONS_BASE_URL=http://localhost:8000.
+#
+# DATA LICENSE: the default `civic` manifest pulls the public OpenSanctions data,
+# which is free for NON-COMMERCIAL use only. For commercial use, buy a license,
+# set YENTE_MANIFEST=commercial and OPENSANCTIONS_DELIVERY_TOKEN in .env
+# (token from https://www.opensanctions.org/account/bulk/).
+# ---------------------------------------------------------------------------
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.4.2
+    restart: unless-stopped
+    environment:
+      - node.name=index
+      - cluster.name=opensanctions-index
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=false
+      # 4g is upstream's default; 2g works on smaller machines but indexes slower.
+      - "ES_JAVA_OPTS=-Xms${ELASTICSEARCH_HEAP:-4g} -Xmx${ELASTICSEARCH_HEAP:-4g}"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - yente_index:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 60s
+
+  yente:
+    image: ghcr.io/opensanctions/yente:5.5.0
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      YENTE_INDEX_TYPE: elasticsearch
+      YENTE_INDEX_URL: http://elasticsearch:9200
+      YENTE_MANIFEST: /app/manifests/${YENTE_MANIFEST:-civic}.yml
+      # Only needed for the commercial manifest.
+      OPENSANCTIONS_DELIVERY_TOKEN: ${OPENSANCTIONS_DELIVERY_TOKEN:-}
+    ports:
+      - "127.0.0.1:${YENTE_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 3s
+
+volumes:
+  yente_index:

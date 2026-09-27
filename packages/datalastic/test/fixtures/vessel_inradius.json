@@ -1,0 +1,47 @@
+{
+  "meta": { "duration": 0.05, "endpoint": "/api/v0/vessel_inradius", "success": true },
+  "data": {
+    "point": { "lat": 14.5, "lon": -17.6, "radius": 10 },
+    "total": 2,
+    "vessels": [
+      {
+        "uuid": "1d9d9e6a-0000-0000-0000-000000000001",
+        "name": "DORRY",
+        "mmsi": "613271707",
+        "imo": "9298595",
+        "country_iso": "CM",
+        "type": "Tanker",
+        "type_specific": "Oil/Chemicals Tanker",
+        "lat": 14.51,
+        "lon": -17.61,
+        "speed": 0.2,
+        "course": 180,
+        "heading": 175,
+        "navigation_status": "At anchor",
+        "destination": "DAKAR",
+        "distance": 0.8,
+        "last_position_epoch": 1747764540,
+        "last_position_UTC": "2025-05-20 18:09:00"
+      },
+      {
+        "uuid": "1d9d9e6a-0000-0000-0000-000000000002",
+        "name": "ELISE",
+        "mmsi": "636000000",
+        "imo": "9111111",
+        "country_iso": "LR",
+        "type": "Tanker",
+        "type_specific": "Crude Oil Tanker",
+        "lat": 14.512,
+        "lon": -17.612,
+        "speed": 0.1,
+        "course": 170,
+        "heading": 168,
+        "navigation_status": "At anchor",
+        "destination": "DAKAR",
+        "distance": 0.9,
+        "last_position_epoch": 1747764600,
+        "last_position_UTC": "2025-05-20 18:10:00"
+      }
+    ]
+  }
+}

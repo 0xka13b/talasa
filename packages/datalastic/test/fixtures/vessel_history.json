@@ -1,0 +1,36 @@
+{
+  "meta": { "endpoint": "/api/v0/vessel_history", "success": true },
+  "data": {
+    "uuid": "1d9d9e6a-0000-0000-0000-000000000001",
+    "name": "DORRY",
+    "mmsi": "613271707",
+    "imo": "9298595",
+    "country_iso": "CM",
+    "type": "Tanker",
+    "type_specific": "Oil/Chemicals Tanker",
+    "positions": [
+      {
+        "lat": 44.6,
+        "lon": 37.8,
+        "speed": 0.1,
+        "course": 0,
+        "heading": 511,
+        "navigation_status": "Moored",
+        "destination": "NOVOROSSIYSK",
+        "last_position_epoch": 1735894560,
+        "last_position_UTC": "2026-01-03 09:56:00"
+      },
+      {
+        "lat": 44.72,
+        "lon": 37.95,
+        "speed": "9.3",
+        "course": "210",
+        "heading": 208,
+        "navigation_status": "Under way using engine",
+        "destination": "COTONOU",
+        "last_position_epoch": 1735975200,
+        "last_position_UTC": "2026-01-04 07:20:00"
+      }
+    ]
+  }
+}

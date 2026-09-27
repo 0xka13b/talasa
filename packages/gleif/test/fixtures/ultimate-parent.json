@@ -1,0 +1,29 @@
+{
+  "data": {
+    "type": "lei-records",
+    "id": "O2RNE8IBXP4R0TD8PU41",
+    "attributes": {
+      "lei": "O2RNE8IBXP4R0TD8PU41",
+      "entity": {
+        "legalName": { "name": "SOCIETE GENERALE", "language": null },
+        "otherNames": [],
+        "legalAddress": {
+          "addressLines": ["29 Boulevard Haussmann"],
+          "city": "PARIS",
+          "region": "FR-75",
+          "country": "FR",
+          "postalCode": "75009"
+        },
+        "headquartersAddress": null,
+        "registeredAt": { "id": "RA000189", "other": null },
+        "registeredAs": "552120222",
+        "jurisdiction": "FR",
+        "category": null,
+        "legalForm": { "id": "8888", "other": "SA" },
+        "status": "ACTIVE"
+      },
+      "registration": { "status": "ISSUED", "managingLou": "969500Q2MA9VLE83JU20" },
+      "bic": null
+    }
+  }
+}

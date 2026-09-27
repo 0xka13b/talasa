@@ -1,0 +1,31 @@
+name: talasa
+
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-talasa}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-talasa}
+      POSTGRES_DB: ${POSTGRES_DB:-talasa}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - talasa_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-talasa}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  adminer:
+    image: adminer:4
+    restart: unless-stopped
+    ports:
+      - "${ADMINER_PORT:-8080}:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  talasa_pg:

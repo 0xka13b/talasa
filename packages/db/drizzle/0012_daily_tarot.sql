@@ -1,0 +1,1 @@
+ALTER TABLE "screenings" ADD COLUMN "archived" boolean DEFAULT false NOT NULL;

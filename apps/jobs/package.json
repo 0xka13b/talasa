@@ -1,0 +1,35 @@
+{
+  "name": "@talasa/jobs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=../../.env src/index.ts",
+    "build": "tsup",
+    "start": "node --env-file=../../.env dist/index.js",
+    "check-types": "tsc --noEmit",
+    "test": "dotenv -e ../../.env -- vitest run"
+  },
+  "dependencies": {
+    "@talasa/db": "workspace:*",
+    "@talasa/shared": "workspace:*",
+    "@talasa/datalastic": "workspace:*",
+    "@talasa/equasis": "workspace:*",
+    "@talasa/opensanctions": "workspace:*",
+    "@talasa/gleif": "workspace:*",
+    "@talasa/inference": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "pino": "^9.5.0",
+    "postgres": "^3.4.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@talasa/typescript-config": "workspace:*",
+    "@types/node": "^22",
+    "dotenv-cli": "^7.4.4",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5",
+    "vitest": "^2"
+  }
+}

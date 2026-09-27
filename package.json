@@ -1,0 +1,31 @@
+{
+  "name": "talasa",
+  "private": true,
+  "packageManager": "pnpm@10.18.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "test": "pnpm -r --workspace-concurrency=1 test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,json}\" --ignore-path .gitignore",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:reset": "docker compose down -v && docker compose up -d",
+    "db:migrate": "pnpm --filter @talasa/db db:migrate",
+    "db:seed": "pnpm --filter @talasa/db db:seed",
+    "db:dump": "pnpm --filter @talasa/db db:dump",
+    "db:setup": "pnpm db:up && pnpm db:migrate && pnpm db:seed",
+    "yente:up": "docker compose -f docker-compose.yente.yml up -d",
+    "yente:down": "docker compose -f docker-compose.yente.yml down",
+    "yente:logs": "docker compose -f docker-compose.yente.yml logs -f yente"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.2"
+  }
+}

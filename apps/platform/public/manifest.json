@@ -1,0 +1,15 @@
+{
+  "short_name": "Talasa",
+  "name": "Talasa Platform",
+  "icons": [
+    {
+      "src": "logo-variant.png",
+      "type": "image/png",
+      "sizes": "205x212"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a"
+}

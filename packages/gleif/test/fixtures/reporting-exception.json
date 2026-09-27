@@ -1,0 +1,1 @@
+{ "data": { "type": "reporting-exceptions", "id": "RE-1", "attributes": { "category": "DIRECT_ACCOUNTING_CONSOLIDATION_PARENT", "reason": "NON_CONSOLIDATING" } } }

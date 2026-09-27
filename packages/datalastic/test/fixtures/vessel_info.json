@@ -1,0 +1,25 @@
+{
+  "meta": { "endpoint": "/api/v0/vessel_info", "success": true },
+  "data": {
+    "uuid": "1d9d9e6a-0000-0000-0000-000000000001",
+    "name": "DORRY",
+    "name_ais": "DORRY",
+    "mmsi": "613271707",
+    "imo": "9298595",
+    "country_iso": "CM",
+    "country_name": "Cameroon",
+    "callsign": "TJMOE5",
+    "type": "Tanker",
+    "type_specific": "Oil/Chemicals Tanker",
+    "gross_tonnage": 13065,
+    "deadweight": 21600,
+    "teu": null,
+    "length": 160,
+    "breadth": 27,
+    "draught_avg": 8.1,
+    "draught_max": 9.62,
+    "year_built": 2005,
+    "home_port": "",
+    "is_navaid": false
+  }
+}

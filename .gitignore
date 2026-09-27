@@ -1,0 +1,30 @@
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Go
+/bin/
+*.test
+*.out
+
+# Node
+node_modules/
+.next/
+.pnpm-store/
+dist/
+
+# Monorepo build artifacts
+.turbo/
+out/
+*.tsbuildinfo
+
+# Local data stores (e.g. waitlist submissions)
+.data/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+.impeccable/

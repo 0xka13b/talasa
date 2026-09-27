@@ -1,0 +1,39 @@
+# Talasa landing — crawler policy.
+# All crawlers are intentionally allowed, INCLUDING AI crawlers
+# (GPTBot, ClaudeBot, Google-Extended, CCBot, PerplexityBot, etc.).
+# Do not add AI-bot Disallow rules here.
+#
+# NOTE: the LIVE robots.txt is augmented by Cloudflare's managed
+# robots.txt / Content Signals, which currently BLOCKS AI crawlers at
+# the edge. This file cannot override that — to actually allow AI
+# crawlers, disable that policy in the Cloudflare dashboard
+# (AI Audit / robots.txt / Content Signals).
+User-agent: *
+# Content Signals (contentsignals.org) — declare AI-usage preferences. Set to
+# `yes` across the board to match the allow-AI policy above.
+Content-Signal: search=yes, ai-train=no, ai-input=yes
+Allow: /
+
+# Explicit allowances documenting intent for the major AI crawlers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
+
+# AI-agent index of this site (llmstxt.org format):
+# https://example.com/llms.txt
